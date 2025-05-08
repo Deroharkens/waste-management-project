@@ -1,3 +1,5 @@
-const stats = document.getElementById('stats');
-const reports = JSON.parse(localStorage.getItem('reports') || '[]');
-stats.textContent = `Total Reports: ${reports.length}`;
+document.addEventListener("DOMContentLoaded", function() {
+    const reports = JSON.parse(localStorage.getItem("wasteReports")) || [];
+    document.getElementById("totalReports").textContent = reports.length;
+    document.getElementById("pendingActions").textContent = reports.length; // Mock data
+});
