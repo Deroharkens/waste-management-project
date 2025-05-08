@@ -1,13 +1,50 @@
 <!DOCTYPE html>
-<html>
-<head><title>Report Issue</title><link rel='stylesheet' href='css/styles.css'></head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Waste Issue</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
 <body>
-<h1>Report Waste Issue</h1>
-<form id='reportForm'>
-<input type='text' id='location' placeholder='Location'><br>
-<textarea id='description' placeholder='Description'></textarea><br>
-<button type='submit'>Submit</button>
-</form>
-<script src='js/script.js'></script>
+    <header>
+        <h1>Report a Waste Issue</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="report.html">Report Issue</a></li>
+                <li><a href="view.html">View Reports</a></li>
+                <li><a href="admin.html">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="report-form">
+            <h2>Submit a Waste Complaint</h2>
+            <form id="wasteForm">
+                <label for="location">Location:</label>
+                <input type="text" id="location" required>
+
+                <label for="issueType">Issue Type:</label>
+                <select id="issueType" required>
+                    <option value="overflowing">Overflowing Bin</option>
+                    <option value="illegal_dumping">Illegal Dumping</option>
+                    <option value="missed_collection">Missed Collection</option>
+                </select>
+
+                <label for="description">Description:</label>
+                <textarea id="description" rows="4" required></textarea>
+
+                <button type="submit" class="btn">Submit Report</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Smart Waste Management</p>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
