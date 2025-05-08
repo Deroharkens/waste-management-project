@@ -1,9 +1,44 @@
 <!DOCTYPE html>
-<html>
-<head><title>Admin Dashboard</title><link rel='stylesheet' href='css/styles.css'></head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
 <body>
-<h1>Admin Dashboard</h1>
-<div id='stats'></div>
-<script src='js/admin.js'></script>
+    <header>
+        <h1>Admin Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="report.html">Report Issue</a></li>
+                <li><a href="view.html">View Reports</a></li>
+                <li><a href="admin.html">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="admin-panel">
+            <h2>Waste Management Overview</h2>
+            <div class="stats">
+                <div class="stat-card">
+                    <h3>Total Reports</h3>
+                    <p id="totalReports">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Pending Actions</h3>
+                    <p id="pendingActions">0</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Smart Waste Management</p>
+    </footer>
+
+    <script src="js/admin.js"></script>
 </body>
 </html>
